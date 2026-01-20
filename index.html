@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Gutschow | Linguistic Forensics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* This section controls the colors based on your System Settings */
         :root {
             --bg-color: #FFFFFF;
             --text-color: #121212;
@@ -26,48 +25,61 @@
             }
         }
 
-        body {
+        /* Full Bleed / No Scroll Logic */
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Disables all scrollbars */
             background-color: var(--bg-color);
+        }
+
+        body {
             color: var(--text-color);
             font-family: 'Inter', sans-serif;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .container { text-align: center; }
+        .container { 
+            text-align: center; 
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
         h1 { 
             font-size: clamp(2.5rem, 10vw, 5.5rem); 
-            font-weight: 900;
+            font-weight: 700; /* Regular Bold instead of Ultra-Bold */
             margin: 0; 
-            letter-spacing: -0.05em;
-            /* This line ensures no CSS is forcing Uppercase */
-            text-transform: none !important; 
+            letter-spacing: -0.02em; /* Relaxed the kerning so letters don't touch */
+            text-transform: none;
+            line-height: 1.1;
         }
 
         p { 
             color: var(--sub-text);
-            font-size: clamp(0.7rem, 2vw, 0.9rem);
-            margin-top: 1.5rem; 
+            font-size: clamp(0.7rem, 2vw, 0.85rem);
+            margin-top: 1rem; 
             font-weight: 400;
-            letter-spacing: 0.4em;
+            letter-spacing: 0.3em; /* Slightly tighter than before for better readability */
             text-transform: uppercase;
+        }
+
+        .links {
+            margin-top: clamp(2rem, 8vh, 5rem);
         }
 
         a { 
             display: inline-block;
-            margin-top: clamp(3rem, 10vh, 6rem);
             color: var(--text-color); 
             text-decoration: none; 
             border: 1px solid var(--border-color); 
-            padding: 16px 40px; 
-            font-size: 0.75rem; 
+            padding: 14px 36px; 
+            font-size: 0.7rem; 
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
@@ -77,6 +89,7 @@
         a:hover { 
             background: var(--text-color); 
             color: var(--bg-color); 
+            border-color: var(--text-color);
         }
     </style>
 </head>
