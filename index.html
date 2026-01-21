@@ -16,25 +16,25 @@
         @media (prefers-color-scheme: dark) { :root { --bg-color: #111111; --text-color: #FFFFFF; --sub-text: #888888; --border: #2A2A2A; } }
         
         html, body { height: 100%; width: 100%; margin: 0; padding: 0; overflow: hidden; background-color: var(--bg-color); }
-        body { color: var(--text-color); font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; transition: background-color 0.4s ease; }
+        body { color: var(--text-color); font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; }
         
         .container { text-align: center; width: 100%; padding: 20px; box-sizing: border-box; }
         
         h1 { 
-            font-size: clamp(2rem, 7vw, 3.8rem); 
-            font-weight: 600; /* Sophisticated medium-bold */
+            font-size: clamp(2.2rem, 8vw, 4rem); 
+            font-weight: 600; 
             margin: 0; 
-            letter-spacing: -0.03em; /* Tight, professional kerning */
-            text-transform: none; /* Forced Mixed Case */
+            letter-spacing: -0.02em; 
+            text-transform: none; 
         }
         
         p { 
             color: var(--sub-text); 
-            font-size: clamp(0.7rem, 1.2vw, 0.85rem); 
-            margin-top: 0.8rem; 
+            font-size: 0.7rem; 
+            margin-top: 1.2rem; 
             font-weight: 400; 
-            letter-spacing: 0.05em;
-            text-transform: none; /* Forced Mixed Case */
+            letter-spacing: 0.35em; /* All-caps wide spacing for the subtitle */
+            text-transform: uppercase; 
         }
         
         .links { margin-top: clamp(3rem, 10vh, 5.5rem); }
@@ -44,10 +44,11 @@
             color: var(--text-color); 
             text-decoration: none; 
             border: 1px solid var(--border); 
-            padding: 14px 55px; 
-            font-size: 0.75rem; 
+            padding: 14px 60px; 
+            font-size: 0.65rem; 
             font-weight: 600; 
-            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
             transition: 0.2s ease; 
         }
         
@@ -57,7 +58,7 @@
 <body>
     <div class="container">
         <h1>Gutschow</h1>
-        <p>Private Capital Management</p>
+        <p>Private Capital</p>
         <div class="links">
             <a href="mailto:info@gutschow.net">Inquiries</a>
         </div>
